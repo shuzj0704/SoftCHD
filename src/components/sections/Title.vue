@@ -4,10 +4,10 @@ import { ElIcon } from 'element-plus'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
 
 // logo地址，没有则置为""即可
-const logo = './logo.png'
+// const logo = './logo.png'
 
 // 标题
-const title = 'SoftCHD: Continuous high-dynamic deformable object interaction and control based on Reinforcement Learning'
+const title = 'SoftCHD: Continuous High-Dynamic Deformable Object Interaction and Control Bbased on Reinforcement Learning'
 
 // 标题颜色
 const title_color = '#000000'
@@ -36,20 +36,20 @@ const addresses = [
   {
     address_flag: "1",
     name: "Hong Kong University",
-    icon: "./icon/home.png",
-    homepage: "https://github.com/hmuniversity"
+    icon: "./icon/HKU.png",
+    // homepage: "https://github.com/hmuniversity"
   },
   {
     address_flag: "2",
     name: "Shanghai Jiaotong University",
-    icon: "./icon/ikun.avif",
-    homepage: "https://www.bilibili.com/video/BV178411Y7QB"
+    icon: "./icon/SJTU.png",
+    // homepage: "https://www.bilibili.com/video/BV178411Y7QB"
   },
 ]
 
 // 共一和通讯提示
 const con_and_corresponding_author = 
-  "#: Equal Contribution. *: Corresponding Author."
+  "*: Equal Contribution. : Corresponding Author."
 
 // 最新消息
 // const news = "🔥 [2024-12-15] This template project is still under development."

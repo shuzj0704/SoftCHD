@@ -21,8 +21,8 @@ export default {
   components: {
     Title,
     Abstract,
-    Markdown,
-    BibTeX,
+    // Markdown,
+    // BibTeX,
     // Carousel,
     Video,
     // ImageSlider,
