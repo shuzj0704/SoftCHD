@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 
+import { computed } from 'vue'
 import { ElIcon } from 'element-plus'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
 
@@ -7,7 +8,7 @@ import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@eleme
 // const logo = './logo.png'
 
 // 标题
-const title = 'SoftCHD: Continuous High-Dynamic Deformable Object Interaction and Control Bbased on Reinforcement Learning'
+const title = 'SoftCHD: Continuous High Dynamic Deformable Object Interaction and Control Based on Reinforcement Learning'
 
 // 标题颜色
 const title_color = '#000000'
@@ -27,7 +28,7 @@ const authors = [
     name: "Zhengjie Shu",
     // icon: "./icon/junyaohu.jpg",
     homepage: "https://junyaohu.github.io/",
-    address_flag: "1,2#"
+    address_flag: "1,2"
   },
 ]
 
@@ -36,7 +37,7 @@ const addresses = [
   {
     address_flag: "1",
     name: "Hong Kong University",
-    icon: "./icon/HKU.png",
+    icon: "./icon/HKU.jpg",
     // homepage: "https://github.com/hmuniversity"
   },
   {
@@ -80,17 +81,26 @@ const buttons = [
   },
 ]
 
+// 将 Continuous / High-Dynamic / Deformable 的首字母高亮并加下划线
+const highlightedTitleHtml = computed(() => {
+  // 只替换要处理的词汇首字母，避免误替换其他位置
+  return title
+    .replace(/\bContinuous\b/, (m) => m.replace(/^./, c => `<span class="chd-letter">${c}</span>`))
+    .replace(/\bHigh\b/, (m) => m.replace(/^./, c => `<span class="chd-letter">${c}</span>`))
+    .replace(/\bDynamic\b/, (m) => m.replace(/^./, c => `<span class="chd-letter">${c}</span>`))
+})
+
 </script>
 
 <template>
   <div>
 
     <!-- 最新消息提示 -->
-    <el-row justify="center">
+    <!-- <el-row justify="center">
       <el-col :span="24">
         <el-alert title="🔥 This template is still under development." type="success" />
       </el-col>
-    </el-row>
+    </el-row> -->
 
     <!-- 文章logo -->
     <el-row v-if="logo" justify="center">
@@ -101,7 +111,8 @@ const buttons = [
     <el-row justify="center">
       <el-col :span="20">
         <h1 class="paper-title">
-          <span v-if="title" :style="{color:title_color}"> {{ title }}</span>
+          <!-- 使用 v-html 渲染带下划线的首字母 -->
+          <span v-html="highlightedTitleHtml" :style="{color: title_color, '--chd-color': title_supp_color}"></span>
           <span v-if="title_supp" :style="{color:title_supp_color}"> {{ title_supp }}</span>
         </h1>
       </el-col>
@@ -119,16 +130,16 @@ const buttons = [
       </a>
     </el-row>
 
-    <!-- 地址名单 -->
+    <!-- 地址名单（不显示链接/不可点击） -->
     <el-row justify="center">
-      <a :href=address.homepage v-for="address in addresses">
-        <el-button class="title-button" type="primary" text>
+      <template v-for="address in addresses" :key="address.address_flag">
+        <el-button class="title-button address-no-link" type="primary" text>
           <el-avatar v-if="address.icon" :size="40" :src="address.icon" />
           <span class="address">
             <sup v-if="address.address_flag" class="address_sup">{{ address.address_flag }}</sup>{{ address.name }}
           </span>
         </el-button>
-      </a>
+      </template>
     </el-row>
 
     <!-- 共一和通讯提示内容 -->
@@ -206,7 +217,7 @@ const buttons = [
 
 /* 地址上标属性 */
 .address_sup {
-  color: #606266; 
+  color: #ffffff; 
   margin-right: 1px;
 }
 
@@ -214,6 +225,11 @@ const buttons = [
 .el-avatar {
   margin-right: 6px;
   box-shadow: #b7b7b7 0px 0px 3px 1px;
+}
+
+/* 地址不显示为链接样式 */
+.address-no-link {
+  cursor: default !important;
 }
 
 /* 共一和通讯文字属性 */
@@ -253,6 +269,15 @@ const buttons = [
   border-radius: 50%;
   box-shadow: #ced3dc 0px 0px 3px 2px;
   margin-top: 40px;
+}
+
+/* CHD 首字母高亮（下划线样式） */
+.chd-letter {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--chd-color, #42B883);
+  font-weight: 700;
 }
 
 /* 手机端链接样式处理 */
