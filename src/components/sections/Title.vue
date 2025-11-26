@@ -7,13 +7,13 @@ import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@eleme
 const logo = './logo.png'
 
 // 标题
-const title = 'Academic Project Page Template'
+const title = 'SoftCHD: Continuous high-dynamic deformable object interaction and control based on Reinforcement Learning'
 
 // 标题颜色
 const title_color = '#000000'
 
 // 标题补充，没有则置为''即可
-const title_supp = ' (Vue based)'
+const title_supp = ''
 
 // 标题补充颜色
 const title_supp_color = '#42B883'
@@ -24,22 +24,10 @@ const btn_color = '#444444'
 // 作者清单（包含作者姓名、头像、主页、地址序号）
 const authors = [
   {
-    name: "Your Name",
-    icon: "./icon/junyaohu.jpg",
+    name: "Zhengjie Shu",
+    // icon: "./icon/junyaohu.jpg",
     homepage: "https://junyaohu.github.io/",
-    address_flag: "1,#"
-  },
-  {
-    name: "Anya Forger",
-    icon: "./icon/anya.jpg",
-    homepage: "https://www.bilibili.com/video/BV1jv4y1P7Bb",
-    address_flag: "2,#"
-  },
-  {
-    name: "BugCat Capoo",
-    icon: "./icon/capoo.webp",
-    homepage: "https://zh.moegirl.org.cn/%E7%8C%AB%E7%8C%AB%E8%99%AB%E5%92%96%E6%B3%A2",
-    address_flag: "1,*"
+    address_flag: "1,2#"
   },
 ]
 
@@ -47,13 +35,13 @@ const authors = [
 const addresses = [
   {
     address_flag: "1",
-    name: "Home University",
+    name: "Hong Kong University",
     icon: "./icon/home.png",
     homepage: "https://github.com/hmuniversity"
   },
   {
     address_flag: "2",
-    name: "IKUN University",
+    name: "Shanghai Jiaotong University",
     icon: "./icon/ikun.avif",
     homepage: "https://www.bilibili.com/video/BV178411Y7QB"
   },
@@ -64,15 +52,12 @@ const con_and_corresponding_author =
   "#: Equal Contribution. *: Corresponding Author."
 
 // 最新消息
-const news = "🔥 [2024-12-15] This template project is still under development."
+// const news = "🔥 [2024-12-15] This template project is still under development."
 
 // 强调内容
-const emphases = [
-  "🎉 [ABCD 2024] Poster",
-  "🥰 欢迎关注“减论”微信公众号/B站/知乎/小红书",
-  "传递人工智能算法科普教育的减约理解",
-  "提升信息效率及认知维度"
-]
+// const emphases = [
+//   "🎉 注释"
+// ]
 
 // 提供引导资料链接
 const buttons = [
@@ -82,42 +67,15 @@ const buttons = [
     component: Document,
   },
   {
-    disabled: true,
-    name: "中译版",
-    component: Document,
-  },
-  {
     disabled: false,
     name: "Code",
-    link: "https://github.com/JunyaoHu/academic-project-page-template-vue",
+    link: "",
     component: Files,
   },
   {
     disabled: false,
-    name: "Demo",
-    link: "https://junyaohu.github.io/academic-project-page-template-vue",
-    component: MagicStick,
-  },
-  {
-    disabled: true,
-    name: "Poster",
-    component: Picture,
-  },
-  {
-    disabled: true,
-    name: "Slide",
-    component: DataAnalysis,
-  },
-  {
-    disabled: false,
-    name: "Video (减论)",
-    link: "https://www.bilibili.com/video/BV15XkgYiE73/",
-    component: Film,
-  },
-  {
-    disabled: false,
-    name: "Video (Tutorial)",
-    link: "https://www.bilibili.com/video/BV1oUrfYzEqZ",
+    name: "Video",
+    link: "",
     component: Film,
   },
 ]
