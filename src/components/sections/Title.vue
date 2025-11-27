@@ -27,8 +27,32 @@ const authors = [
   {
     name: "Zhengjie Shu",
     // icon: "./icon/junyaohu.jpg",
-    homepage: "https://junyaohu.github.io/",
+    // homepage: "https://junyaohu.github.io/",
     address_flag: "1,2"
+  },
+  {
+    name: "Haoran Wang",
+    // icon: "./icon/junyaohu.jpg",
+    // homepage: "https://junyaohu.github.io/",
+    address_flag: "1"
+  },
+  {
+    name: "Wenkang Hu",
+    // icon: "./icon/junyaohu.jpg",
+    // homepage: "https://junyaohu.github.io/",
+    address_flag: "1"
+  },
+  {
+    name: "Chenggang Wang",
+    // icon: "./icon/junyaohu.jpg",
+    // homepage: "https://junyaohu.github.io/",
+    address_flag: "1"
+  },
+  {
+    name: "Ruigang Yang",
+    // icon: "./icon/junyaohu.jpg",
+    // homepage: "https://junyaohu.github.io/",
+    address_flag: "1"
   },
 ]
 
@@ -36,14 +60,14 @@ const authors = [
 const addresses = [
   {
     address_flag: "1",
-    name: "Hong Kong University",
-    icon: "./icon/HKU.jpg",
+    name: "Shanghai Jiao Tong University",
+    icon: "./icon/SJTU.png",
     // homepage: "https://github.com/hmuniversity"
   },
   {
     address_flag: "2",
-    name: "Shanghai Jiaotong University",
-    icon: "./icon/SJTU.png",
+    name: "Hong Kong University ",
+    icon: "./icon/HKU.jpg",
     // homepage: "https://www.bilibili.com/video/BV178411Y7QB"
   },
 ]
@@ -206,7 +230,7 @@ const highlightedTitleHtml = computed(() => {
 
 /* 姓名上标属性 */
 .name_sup {
-  color: #606266; 
+  color: #ffffff; 
   margin-left: 3px;
 }
 
@@ -224,7 +248,7 @@ const highlightedTitleHtml = computed(() => {
 /* 头像属性 */
 .el-avatar {
   margin-right: 6px;
-  box-shadow: #b7b7b7 0px 0px 3px 1px;
+  box-shadow: #ffffff 0px 0px 3px 1px;
 }
 
 /* 地址不显示为链接样式 */
